@@ -10,7 +10,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  final socket = IO.io('http://192.168.178.102:3000', <String, dynamic>{
+  final socket =
+      IO.io('https://young-gorge-97874.herokuapp.com/', <String, dynamic>{
     'transports': ['websocket'],
     'force new connection': true,
     'auto connect': false
@@ -58,11 +59,15 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Container(
           child: Column(
             children: <Widget>[
-              SizedBox(height: 200,),
+              SizedBox(
+                height: 200,
+              ),
               PdweRaisedButton(() {
                 Navigator.of(context).pushNamed(JoinScreen.routeName);
               }, 'Spiel beitreten'),
-              SizedBox(height: 20,),
+              SizedBox(
+                height: 20,
+              ),
               // PdweRaisedButton(() {
               //   Navigator.of(context).pushNamed(StartScreen.routeName);
               // }, 'Spiel erstellen'),
